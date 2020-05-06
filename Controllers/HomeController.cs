@@ -5,39 +5,26 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using evenTons.Models;
+using System.IO;
 
 namespace evenTons.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
-        {
+        public IActionResult Index(){
             return View();
         }
 
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
+        public FileResult Arquivo(){
+            return File("~/pdf/currículo.pdf", "application/pdf");
         }
 
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
+        public IActionResult Resultado() {
+            ViewData["valor1"] = "Primeiro resultado";
+            //ViewBag.Mensagem = "Mensagem gerada em " + DateTime.Now; 
 
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }
