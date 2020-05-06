@@ -21,7 +21,7 @@ namespace evenTons.Controllers
 
         public IActionResult Resultado() {
             ViewData["valor1"] = "Primeiro resultado";
-            //ViewBag.Mensagem = "Mensagem gerada em " + DateTime.Now; 
+            ViewBag.Mensagem = "Mensagem gerada em " + DateTime.Now; 
 
             return View();
         }
