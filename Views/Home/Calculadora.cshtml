@@ -1,0 +1,29 @@
+﻿
+@{
+    @ViewData["Title"] = "Calculadora";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Calculadora</title>
+</head>
+<body>
+
+    @using (Html.BeginForm()) {
+
+        @Html.Label("Primeiro valor: ") <br />
+        @Html.TextBox("valor1", (double?)ViewBag.douValor1) <br />
+        @Html.Label("Segundo Valor")  <br />
+        @Html.TextBox("valor2",(double?)ViewBag.douValor2) <br />
+
+        <input type="submit" value="Calcular" />
+        <br />
+        @ViewBag.Resultado
+
+    }
+
+</body>
+</html>

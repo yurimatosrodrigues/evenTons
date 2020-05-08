@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using evenTons.Models;
 using System.IO;
+using Microsoft.AspNetCore.Http;
 
 namespace evenTons.Controllers
 {
@@ -24,6 +25,50 @@ namespace evenTons.Controllers
             ViewBag.Mensagem = "Mensagem gerada em " + DateTime.Now; 
 
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult Calculadora(double? pvDouValor1, double? pvDouValor2) {
+            ViewBag.pvDouValor1 = pvDouValor1;
+            ViewBag.pvDouValor2 = pvDouValor2;
+            return View();
+        }       
+
+
+        [HttpPost]
+        public IActionResult Calculadora(IFormCollection form) {
+            double douValor1 = double.Parse(form["valor1"]);
+            double douValor2 = double.Parse(form["valor2"]);
+
+            double douResultado = douValor1 + douValor2;
+            ViewBag.Resultado = "Resultado da soma: " + douResultado;
+
+            return View();
+        }
+
+
+        // Actions usados com a classe produto
+        [HttpGet]
+        public IActionResult IncluirProduto01() {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult IncluirProduto01(Product pvClsProduto) {
+            return View();        
+        }
+
+        public IActionResult ExibirProduto() {
+            
+            Product clsProduto = new Product()
+            {
+                Codigo = 25,
+                Descricao = "Bike",
+                Preco = 500,
+                DataFabricacao = Convert.ToDateTime("13/06/1999")
+            };
+
+            return View(clsProduto);
         }
 
     }

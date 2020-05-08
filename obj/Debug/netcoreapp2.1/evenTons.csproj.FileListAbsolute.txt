@@ -38,3 +38,6 @@ C:\Users\yuu_r\OneDrive\Documentos\Yuri\Projetos\evenTons\obj\Debug\netcoreapp2.
 C:\Users\yuu_r\OneDrive\Documentos\Yuri\Projetos\evenTons\obj\Debug\netcoreapp2.1\evenTons.csproj.CoreCompileInputs.cache
 C:\Users\yuu_r\OneDrive\Documentos\Yuri\Projetos\evenTons\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 C:\Users\yuu_r\OneDrive\Documentos\Yuri\Projetos\evenTons\obj\Debug\netcoreapp2.1\Razor\Views\Home\Resultado.cshtml.g.cs
+C:\Users\yuu_r\OneDrive\Documentos\Yuri\Projetos\evenTons\obj\Debug\netcoreapp2.1\Razor\Views\Home\Calculadora.cshtml.g.cs
+C:\Users\yuu_r\OneDrive\Documentos\Yuri\Projetos\evenTons\obj\Debug\netcoreapp2.1\Razor\Views\Home\ExibirProduto.cshtml.g.cs
+C:\Users\yuu_r\OneDrive\Documentos\Yuri\Projetos\evenTons\obj\Debug\netcoreapp2.1\Razor\Views\Home\IncluirProduto01.cshtml.g.cs
