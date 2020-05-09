@@ -4,25 +4,6 @@
     @*-Layout = "~/Views/Home/Index.cshtml";*@
 }
 
-
-@{
-    int red=0,green=100,blue=255;
-}
-
-@{ 
-
-    @Html.TextBox("digite um valor");
-}
-
-<input />
-
-<style>
-    p {
-        color:rgb(@red, @green, @blue);
-    }
-
-</style>
-
 <h2>Exemplos de Action</h2>
 
 @* Tag Helpers -> Novo conceito do ASP.NET CORE *@
@@ -38,31 +19,10 @@
 <ul>
     <li> @Html.ActionLink("Visualizar PDF", "Arquivo", "Home") </li>
     <li> @Html.ActionLink("Visualizar resultados ViewData/ViewBag", "Resultado")</li>
+    <li> <a asp-controller="Home" asp-action="IncluirProduto01"> Formulário de Produtos </a> </li>
+    <li> <a asp-controller="Home" asp-action="Calculadora"> Calculadora </a> </li>
+    <li> <a asp-controller="Home" asp-action="ExibirProduto"> Exibir Produto </a> </li>
 </ul>
 
-@{  int LIntTeste = 4;
-    int LIntContador = 0;
 
-    Dictionary<int,string> LDicFamilia = new Dictionary<int, string>();
-
-    LDicFamilia.Add(1, "Terezinha");
-    LDicFamilia.Add(2, "Marcos");
-    LDicFamilia.Add(3, "Yuri");
-
-    foreach (var pessoa in LDicFamilia) {
-
-
-        <p> Eu amo a pessoa @pessoa.Key , que é: </p>
-        <p> <h2> @pessoa.Value </h2></p>
-     }
-
-
-    for (LIntContador = 0; LIntContador <= LIntTeste; LIntContador++)
-    {
-    <p> Teste @LIntContador </p>
-        }
-
-}
-
-<p> @LIntContador </p>
 
