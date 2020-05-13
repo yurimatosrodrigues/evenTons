@@ -1,24 +1,29 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Index";
     @*-Layout = "~/Views/Home/Index.cshtml";*@
 }
 
 <h2>Exemplos de Action</h2>
 
-@* Tag Helpers -> Novo conceito do ASP.NET CORE *@
+<p> Tag Helpers -> Novo conceito do ASP.NET CORE </p>
+
+<br />
 
 <ul>
     <li> <a asp-controller="Home" asp-action="Arquivo"> Visualizar PDF </a> </li>
     <li> <a asp-controller="Home" asp-action="Resultado"> Visualizar resultados ViewData/ViewBag</a></li>
 </ul>
 
+<br />
 
-@* HTML Helpers -> Conceito já usado no ASP.NET MVC*@
+<p>HTML Helpers -> Conceito já usado no ASP.NET MVC</p>
+
+<br />
 
 <ul>
     <li> @Html.ActionLink("Visualizar PDF", "Arquivo", "Home") </li>
     <li> @Html.ActionLink("Visualizar resultados ViewData/ViewBag", "Resultado")</li>
+    <br />
     <li> <a asp-controller="Home" asp-action="IncluirProduto01"> Formulário de Produtos </a> </li>
     <li> <a asp-controller="Home" asp-action="Calculadora"> Calculadora </a> </li>
     <li> <a asp-controller="Home" asp-action="ExibirProduto"> Exibir Produto </a> </li>

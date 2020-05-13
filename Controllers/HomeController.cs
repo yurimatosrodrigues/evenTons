@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using evenTons.Models;
 using System.IO;
 using Microsoft.AspNetCore.Http;
+using System.Text;
 
 namespace evenTons.Controllers
 {
@@ -55,7 +56,16 @@ namespace evenTons.Controllers
 
         [HttpPost]
         public IActionResult IncluirProduto01(Product pvClsProduto) {
-            return View();        
+            StreamWriter LSw = new StreamWriter("wwwroot/pdf/documento.txt", false, Encoding.UTF8);
+            LSw.WriteLine("Código: " + pvClsProduto.Codigo);
+            LSw.WriteLine("Descrição: " + pvClsProduto.Descricao);
+            LSw.WriteLine("Preço: " + pvClsProduto.Preco);
+            LSw.WriteLine("Data de Fabricação: " + pvClsProduto.DataFabricacao);
+            LSw.Close();
+
+            //return View();        
+
+            return File("~/pdf/documento.txt", "text/plain");
         }
 
         public IActionResult ExibirProduto() {

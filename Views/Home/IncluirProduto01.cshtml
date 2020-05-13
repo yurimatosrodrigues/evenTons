@@ -8,17 +8,17 @@
 
 @using (Html.BeginForm())
 { 
-    @Html.LabelFor(m => m.Codigo)    
-    @Html.EditorFor(m => m.Codigo) <br />
+    @Html.LabelFor(m => m.Codigo)    <br />
+    @Html.EditorFor(m => m.Codigo) <br /><br />
 
-    @Html.LabelFor(m => m.Descricao)
-    @Html.EditorFor(m => m.Descricao) <br />
+    @Html.LabelFor(m => m.Descricao) <br />
+    @Html.EditorFor(m => m.Descricao) <br /><br />
 
-    @Html.LabelFor(m => m.Preco)
-    @Html.EditorFor(m => m.Preco) <br />
+    @Html.LabelFor(m => m.Preco) <br />
+    @Html.EditorFor(m => m.Preco) <br /><br />
 
-    @Html.LabelFor(m => m.DataFabricacao)
-    @Html.EditorFor(m =>m.DataFabricacao) <br />
+    @Html.LabelFor(m => m.DataFabricacao) <br />
+    @Html.EditorFor(m =>m.DataFabricacao) <br /><br />
 
-    <input type="submit" value=" = "Enviar"/>
+    <input type="submit" value="Enviar"/>
 }
